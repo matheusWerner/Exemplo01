@@ -90,6 +90,7 @@ public class Exemplo00 implements JFrameBaseInterface, JFrameScrolleComboInterfa
        jFrame.add(jTextFieldIdade);
        jFrame.add(jTextFieldPreco);
        jFrame.add(jTextFieldApelido);
+       jFrame.add(jScrollPaneDescricao);
     }
 
     @Override
@@ -100,7 +101,7 @@ public class Exemplo00 implements JFrameBaseInterface, JFrameScrolleComboInterfa
         jRadioButtonRacao = new JRadioButton("Ração");
         jRadioButtonVivo = new JRadioButton("Vivo");
         jRadioButtonMorto = new JRadioButton("Morto");
-        jRadioButtonCome = new JRadioButton("Come");
+        jRadioButtonCome = new JRadioButton("Come almoços, jantas");
         jCheckBoxAdestrado = new JCheckBox("Adestrado");
         jCheckBoxVacinado = new JCheckBox("Vacinado");
         jCheckBoxCastrado = new JCheckBox("Castrado");
@@ -128,6 +129,21 @@ public class Exemplo00 implements JFrameBaseInterface, JFrameScrolleComboInterfa
         jComboBoxRaca.setLocation(5,85);
         jLabelApelido.setLocation(194,60);
         jTextFieldApelido.setLocation(194,85);
+        jLabelIdade.setLocation(400,3);
+        jTextFieldIdade.setLocation(400,30);
+        jLabelPreco.setLocation(400,60);
+        jTextFieldPreco.setLocation(400,85);
+        jRadioButtonVivo.setLocation(3,125);
+        jRadioButtonMorto.setLocation(3,155);
+        jRadioButtonRacao.setLocation(100,125);
+        jRadioButtonCome.setLocation(100,155);
+        jCheckBoxAdestrado.setLocation(340,125);
+        jCheckBoxVacinado.setLocation(340,155);
+        jCheckBoxCastrado.setLocation(470,125);
+        jCheckBoxTemPedigree.setLocation(470,155);
+        jLabelDescricao.setLocation(5,185);
+        jScrollPaneDescricao.setLocation(5,210);
+        jButtonCancelar.setLocation(325,304);
     }
 
     @Override
@@ -138,17 +154,27 @@ public class Exemplo00 implements JFrameBaseInterface, JFrameScrolleComboInterfa
         jComboBoxRaca.setSize(150,23);
         jLabelApelido.setSize(100,20);
         jTextFieldApelido.setSize(150,23);
+        jLabelIdade.setSize(100,20);
+        jTextFieldIdade.setSize(190,23);
+        jLabelPreco.setSize(60,20);
+        jTextFieldPreco.setSize(190,23);
+        jRadioButtonVivo.setSize(100,20);
+        jRadioButtonMorto.setSize(100,20);
+        jRadioButtonRacao.setSize(100,20);
+        jRadioButtonCome.setSize(200,20);
+        jCheckBoxAdestrado.setSize(100,20);
+        jCheckBoxVacinado.setSize(100,20);
+        jCheckBoxCastrado.setSize(100,20);
+        jCheckBoxTemPedigree.setSize(200,20);
+        jLabelDescricao.setSize(100,20);
+        jScrollPaneDescricao.setSize(580,90);
+        jButtonCancelar.setSize(130,70);
     }
 
     @Override
     public void configurarJScrollPane() {
-        jScrollPaneDescricao.setViewportView(jTextAreaDescricao);
-        jScrollPaneDescricao.setHorizontalScrollBarPolicy(
-        JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPaneDescricao.setVerticalScrollBarPolicy(
-        JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        jTextAreaDescricao.setLineWrap(true);
-        
+        jScrollPaneDescricao.setViewportView(jTextAreaDescricao); 
+        jTextAreaDescricao.setLineWrap(true);    
     }
 
     @Override

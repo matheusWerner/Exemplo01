@@ -14,11 +14,13 @@ import javax.swing.JRadioButton;
 import javax.swing.JComboBox;
 import javax.swing.JTextArea;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ButtonGroup;
 /**
  *
  * @author Matheus Ruan Werner
  */
-public class Exemplo00 implements JFrameBaseInterface, JFrameScrolleComboInterface, JFrameCancelareSalvarInterface {
+public class Exemplo00 implements JFrameBaseInterface, JFrameScrolleComboInterface, 
+                                  JFrameCancelareSalvarInterface, JFrameConfiguracoesInterface {
     
     private JFrame jFrame;
     private JButton jButtonSalvar,
@@ -44,6 +46,8 @@ public class Exemplo00 implements JFrameBaseInterface, JFrameScrolleComboInterfa
                        jTextFieldApelido,
                        jTextFieldIdade,
                        jTextFieldPreco;
+    private ButtonGroup buttonGroupVouM,
+                        buttonGroupRouC;
     
     public Exemplo00() {
         instanciarComponentes();
@@ -55,6 +59,7 @@ public class Exemplo00 implements JFrameBaseInterface, JFrameScrolleComboInterfa
         configurarJComboBox();
         configurarCancelar();
         configurarSalvar();
+        configurarButtonGroup();
         jFrame.setVisible(true);
     }
   
@@ -93,6 +98,7 @@ public class Exemplo00 implements JFrameBaseInterface, JFrameScrolleComboInterfa
        jFrame.add(jTextFieldPreco);
        jFrame.add(jTextFieldApelido);
        jFrame.add(jScrollPaneDescricao);
+   
     }
 
     @Override
@@ -120,7 +126,8 @@ public class Exemplo00 implements JFrameBaseInterface, JFrameScrolleComboInterfa
         jTextFieldPreco = new JTextField();        
         jButtonSalvar = new JButton("Salvar");
         jButtonCancelar = new JButton("Cancelar");  
-        
+        buttonGroupVouM = new ButtonGroup();
+        buttonGroupRouC = new ButtonGroup();
     }
 
     @Override
@@ -234,6 +241,14 @@ public class Exemplo00 implements JFrameBaseInterface, JFrameScrolleComboInterfa
                 JOptionPane.showMessageDialog(null, "Nome: " + jTextFieldNome.getText());
             }
         });
+    }
+
+    @Override
+    public void configurarButtonGroup() {
+        buttonGroupVouM.add(jRadioButtonVivo);
+        buttonGroupVouM.add(jRadioButtonMorto);
+        buttonGroupRouC.add(jRadioButtonRacao);
+        buttonGroupRouC.add(jRadioButtonCome);     
     }
     
     

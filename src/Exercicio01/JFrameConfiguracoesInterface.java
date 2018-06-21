@@ -11,4 +11,8 @@ package Exercicio01;
  */
 public interface JFrameConfiguracoesInterface {
     
+    void configurarButtonGroup();
+    
+    
+    
 }

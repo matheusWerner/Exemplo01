@@ -18,7 +18,7 @@ import javax.swing.DefaultComboBoxModel;
  *
  * @author Matheus Ruan Werner
  */
-public class Exemplo00 implements JFrameBaseInterface, JFrameScrolleComboInterface{
+public class Exemplo00 implements JFrameBaseInterface, JFrameScrolleComboInterface, JFrameCancelareSalvarInterface {
     
     private JFrame jFrame;
     private JButton jButtonSalvar,
@@ -53,6 +53,8 @@ public class Exemplo00 implements JFrameBaseInterface, JFrameScrolleComboInterfa
         gerarDimensoes();
         configurarJScrollPane();
         configurarJComboBox();
+        configurarCancelar();
+        configurarSalvar();
         jFrame.setVisible(true);
     }
   
@@ -192,6 +194,51 @@ public class Exemplo00 implements JFrameBaseInterface, JFrameScrolleComboInterfa
         
     
     }
+
+    @Override
+    public void configurarCancelar() {
+        jButtonCancelar.addActionListener (new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                jComboBoxRaca.setSelectedIndex(-1);
+                jCheckBoxAdestrado.setSelected(false);
+                jCheckBoxVacinado.setSelected(false);
+                jCheckBoxCastrado.setSelected(false);
+                jCheckBoxTemPedigree.setSelected(false);
+                jRadioButtonRacao.setSelected(false);        
+                jRadioButtonVivo.setSelected(false); 
+                jRadioButtonMorto.setSelected(false);
+                jRadioButtonCome.setSelected(false);
+                jTextFieldNome.setText(null);
+                jTextFieldApelido.setText(null);
+                jTextFieldIdade.setText(null);
+                jTextFieldPreco.setText(null);
+                jTextAreaDescricao.setText(null);
+            }
+        });
+    }
+
+    @Override
+    public void configurarSalvar() {
+        String infos = "";
+        infos += jTextFieldNome.getText()
+                 + jTextFieldApelido.getText()
+                 + jTextFieldIdade.getText()
+                 + jTextFieldPreco.getText()
+                 + jComboBoxRaca.getSelectedIndex();
+        
+        jButtonSalvar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               
+                JOptionPane.showMessageDialog(null, "Nome: " + jTextFieldNome.getText());
+            }
+        });
+    }
+    
+    
+    
+    
     
    
                    

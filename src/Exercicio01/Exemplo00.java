@@ -124,26 +124,27 @@ public class Exemplo00 implements JFrameBaseInterface, JFrameScrolleComboInterfa
     @Override
     public void gerarLocalizacoes() {
         jLabelNome.setLocation(5,3);
-        jTextFieldNome.setLocation(5,30);
-        jLabelRaca.setLocation(5,60);
-        jComboBoxRaca.setLocation(5,85);
-        jLabelApelido.setLocation(194,60);
-        jTextFieldApelido.setLocation(194,85);
+        jTextFieldNome.setLocation(5,25);
+        jLabelRaca.setLocation(5,55);
+        jComboBoxRaca.setLocation(5,80);
+        jLabelApelido.setLocation(194,55);
+        jTextFieldApelido.setLocation(194,80);
         jLabelIdade.setLocation(400,3);
-        jTextFieldIdade.setLocation(400,30);
-        jLabelPreco.setLocation(400,60);
-        jTextFieldPreco.setLocation(400,85);
-        jRadioButtonVivo.setLocation(3,125);
-        jRadioButtonMorto.setLocation(3,155);
-        jRadioButtonRacao.setLocation(100,125);
-        jRadioButtonCome.setLocation(100,155);
-        jCheckBoxAdestrado.setLocation(340,125);
-        jCheckBoxVacinado.setLocation(340,155);
-        jCheckBoxCastrado.setLocation(470,125);
-        jCheckBoxTemPedigree.setLocation(470,155);
-        jLabelDescricao.setLocation(5,185);
-        jScrollPaneDescricao.setLocation(5,210);
-        jButtonCancelar.setLocation(325,304);
+        jTextFieldIdade.setLocation(400,25);
+        jLabelPreco.setLocation(400,55);
+        jTextFieldPreco.setLocation(400,80);
+        jRadioButtonVivo.setLocation(3,115);
+        jRadioButtonMorto.setLocation(3,145);
+        jRadioButtonRacao.setLocation(100,115);
+        jRadioButtonCome.setLocation(100,145);
+        jCheckBoxAdestrado.setLocation(340,120);
+        jCheckBoxVacinado.setLocation(340,150);
+        jCheckBoxCastrado.setLocation(470,120);
+        jCheckBoxTemPedigree.setLocation(470,150);
+        jLabelDescricao.setLocation(5,170);
+        jScrollPaneDescricao.setLocation(5,195);
+        jButtonCancelar.setLocation(320,297);
+        jButtonSalvar.setLocation(459,297);
     }
 
     @Override
@@ -167,8 +168,9 @@ public class Exemplo00 implements JFrameBaseInterface, JFrameScrolleComboInterfa
         jCheckBoxCastrado.setSize(100,20);
         jCheckBoxTemPedigree.setSize(200,20);
         jLabelDescricao.setSize(100,20);
-        jScrollPaneDescricao.setSize(580,90);
+        jScrollPaneDescricao.setSize(585,90);
         jButtonCancelar.setSize(130,70);
+        jButtonSalvar.setSize(130,70);
     }
 
     @Override
